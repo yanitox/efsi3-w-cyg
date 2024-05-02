@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Titulo from './componentes/titulo/Titulo';
+import Subtitulo from './componentes/subtitulo/Subtitulo';
+import Formulario from './componentes/formulario/Formulario';
+import Turno from './componentes/turno-final/turno';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <>
+        <div className='titulo'>
+        <h1>ADMINISTRADOR DE PACIENTES</h1>
+        </div>
+        
+
+        <div class='container'>
+        <div class='columnaForm'>
+          <Subtitulo className="subtitulo" texto={"CREAR MI CITA"}></Subtitulo>
+          <Formulario className="formulario"></Formulario>
+        </div>
+
+        <div class='columnaCita'> 
+          <Subtitulo className="subtitulo" texto={"ADMINISTRA TUS CITAS"}></Subtitulo>
+          <Turno></Turno>
+        </div>
+        </div>
+       
+        
+      </>
+     
+    
   );
 }
 
